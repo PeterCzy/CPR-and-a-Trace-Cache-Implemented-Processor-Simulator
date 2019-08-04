@@ -1,0 +1,61 @@
+Binary file scratch/721sim matches
+execute.cc:                  REN->set_ready(PAY.buf[index].C_phys_reg);
+execute.cc:                  REN->write(PAY.buf[index].C_phys_reg,PAY.buf[index].C_value.dw);
+execute.cc:               REN->write(PAY.buf[index].C_phys_reg, 0);
+execute.cc:            REN->set_exception(al_index);
+execute.cc:            REN->set_exception(al_index);
+execute.cc:            REN->write(PAY.buf[index].C_phys_reg,PAY.buf[index].C_value.dw);
+execute.cc:      REN->set_ready(PAY.buf[index].C_phys_reg);
+execute.cc:      REN->write(PAY.buf[index].C_phys_reg,value);
+execute.cc:      REN->set_complete(PAY.buf[index].AL_index);
+writeback.cc:            REN->resolve(PAY.buf[index].AL_index,PAY.buf[index].branch_ID,true);
+writeback.cc:            REN->resolve(PAY.buf[index].AL_index,PAY.buf[index].branch_ID,true);
+writeback.cc:            REN->resolve(PAY.buf[index].AL_index,PAY.buf[index].branch_ID,false);
+writeback.cc:      REN->set_complete(PAY.buf[index].AL_index);
+pipeline.cc:      REN->write(REN->rename_rsrc(i), get_state()->XPR[i]);
+pipeline.cc:      REN->write(REN->rename_rsrc(i+NXPR), get_state()->FPR[i]);
+pipeline.cc:    return REN->read(REN->rename_rsrc(reg_id));
+pipeline.cc:   REN->set_exception(al_index);
+register_read.cc:            REN->set_ready(PAY.buf[index].C_phys_reg);
+register_read.cc:        PAY.buf[index].A_value.dw=REN->read(PAY.buf[index].A_phys_reg);
+register_read.cc:        PAY.buf[index].B_value.dw=REN->read(PAY.buf[index].B_phys_reg);
+register_read.cc:        PAY.buf[index].D_value.dw=REN->read(PAY.buf[index].D_phys_reg);
+rename.cc:   if(REN->stall_branch(num_br) || REN->stall_reg(num_dst)){
+rename.cc:	REN->increment_usage_counter(PAY.buf[index].A_log_reg);
+rename.cc:        PAY.buf[index].A_phys_reg=REN->rename_rsrc(PAY.buf[index].A_log_reg);
+rename.cc:	REN->increment_usage_counter(PAY.buf[index].B_log_reg);
+rename.cc:        PAY.buf[index].B_phys_reg=REN->rename_rsrc(PAY.buf[index].B_log_reg);
+rename.cc:	REN->increment_usage_counter(PAY.buf[index].D_log_reg);
+rename.cc:        PAY.buf[index].D_phys_reg=REN->rename_rsrc(PAY.buf[index].D_log_reg);
+rename.cc:	REN->set_unmap_bit(PAY.buf[index].C_log_reg);
+rename.cc:        PAY.buf[index].C_phys_reg=REN->rename_rdst(PAY.buf[index].C_log_reg);
+rename.cc:	REN->reset_unmap_bit(PAY.buf[index].C_log_reg);
+rename.cc:        PAY.buf[index].branch_ID = REN->checkpoint();
+rename.cc:      checkpoint_assigned = REN->add_checkpoint();
+rename.cc:      RENAME2[i].branch_mask = REN->get_branch_mask();
+rename.cc:	REN->assign_PC(PAY.buf[index].pc);
+checker.cc:     assert(REN->get_exception(PAY.buf[head].AL_index) == true);
+dispatch.cc:   if(REN->stall_dispatch(dispatch_width)){
+dispatch.cc:      PAY.buf[index].AL_index=REN->dispatch_inst(PAY.buf[index].C_valid,PAY.buf[index].C_log_reg,PAY.buf[index].C_phys_reg,load_flag,store_flag,branch_flag,PAY.buf[index].pc);
+dispatch.cc:            A_ready=REN->is_ready(PAY.buf[index].A_phys_reg);
+dispatch.cc:            B_ready=REN->is_ready(PAY.buf[index].B_phys_reg);
+dispatch.cc:            D_ready=REN->is_ready(PAY.buf[index].D_phys_reg);
+dispatch.cc:            REN->clear_ready(PAY.buf[index].C_phys_reg);
+dispatch.cc:            REN->set_complete(PAY.buf[index].AL_index);
+dispatch.cc:            REN->set_exception(PAY.buf[index].AL_index);
+dispatch.cc:            REN->set_complete(PAY.buf[index].AL_index);
+dispatch.cc:            REN->set_exception(PAY.buf[index].AL_index);
+dispatch.cc:         REN->set_exception(PAY.buf[index].AL_index);
+dispatch.cc:            REN->set_exception(PAY.buf[index].AL_index);
+retire.cc:   head_valid=REN->precommit(completed, misprediction, exception, load, store, branch,offending_PC);
+retire.cc:                  REN->set_exception(PAY.buf[PAY.head].AL_index);
+retire.cc:                  REN->set_exception(PAY.buf[PAY.head].AL_index);
+retire.cc:   head_valid=REN->commit(completed, misprediction, exception, load, store, branch,offending_PC);
+retire.cc:            REN->squash();
+retire.cc:  REN->write(PAY.buf[index].C_phys_reg, PAY.buf[index].C_value.dw);
+retire.cc:         REN->write(PAY.buf[index].C_phys_reg, PAY.buf[index].C_value.dw);
+retire.cc:            REN->set_exception(PAY.buf[index].AL_index);
+retire.cc:            REN->set_exception(PAY.buf[index].AL_index);
+retire.cc:      REN->set_exception(PAY.buf[index].AL_index);
+Binary file 721sim matches
+Binary file checker.o matches
